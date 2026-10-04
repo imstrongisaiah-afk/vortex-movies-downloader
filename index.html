@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex Movies Downloader</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0f19;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #111827;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #263043;
+    }
+
+    header h1 {
+      color: #38bdf8;
+      font-size: 28px;
+    }
+
+    header p {
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .box {
+      background: #111827;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #263043;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #374151;
+      background: #0b0f19;
+      color: white;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #38bdf8;
+      color: #07111f;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #7dd3fc;
+    }
+
+    #message {
+      margin-top: 20px;
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🎬 Vortex Movies Downloader</h1>
+    <p>Simple and fast video download tool</p>
+  </header>
+
+  <div class="container">
+    <div class="box">
+      <h2>Download a Video</h2>
+
+      <input
+        type="text"
+        id="videoUrl"
+        placeholder="Paste a video URL here"
+      >
+
+      <button onclick="downloadVideo()">
+        Download Video
+      </button>
+
+      <div id="message"></div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Vortex Movies Downloader
+  </footer>
+
+  <script>
+    function downloadVideo() {
+      const url = document.getElementById("videoUrl").value.trim();
+      const message = document.getElementById("message");
+
+      if (!url) {
+        message.textContent = "Please paste a video URL first.";
+        return;
+      }
+
+      message.textContent =
+        "Your link has been received. Download functionality will be connected next.";
+    }
+  </script>
+
+</body>
+</html>
+Then
